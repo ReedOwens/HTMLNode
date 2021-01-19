@@ -1,0 +1,69 @@
+<div id="custom-diagram" class="control-section">
+	<div class="col-lg-8 control-section" style="width: 100%;">
+		<div class="content-wrapper">
+			<ejs-diagram #diagram id="diagram" width="100%" height="900px" [nodes]="nodes" [backgroundColor]="back"
+				(created)="created()">
+				<ng-template #nodeTemplate let-data>
+					<div style="height: 100%;width: 100%;background: red;">
+						<div class="top">
+							In Review of all
+						</div>
+						<div contentEditable="true" class="center">
+							user(read owners)
+							<br>
+           Manager
+							<br>
+           VP
+							<br>
+           HR Manager
+        </div>
+							<div class="bottom">
+								<img src="https://www.w3schools.com/images/lamp.jpg"  width="30" height="30"onclick="console.log('image one clicked')">
+								<img src="https://www.w3schools.com/images/lamp.jpg"  width="30" height="30" onclick="console.log('image two clicked')">
+
+        </div>
+							</div>
+				</ng-template>
+			</ejs-diagram>
+		</div>
+	</div>
+</div>
+<!-- custom code start -->
+<style>
+	.top {
+
+	//	height: 40px;
+//		width: 100%;
+		background: blue;
+		text-align: center;
+		font-weight: 600;
+		font-size: 35px;
+		font-family: sans-serif;
+      white-space: nowrap; 
+ // overflow: hidden;
+  //text-overflow: ellipsis;
+	}
+
+	.center {
+		//height: calc(100% - 80px);
+	//	width: 100%;
+		background: green;
+		font-weight: 400;
+		font-size: 20px;
+		font-family: sans-serif;
+	}
+
+	.bottom {
+		height: 40px;
+	//	width: 100%;
+		background: yellow;
+	}
+
+	#diagram_control {
+		background-color: white;
+		height: 100%;
+		width: auto;
+	}
+
+</style>
+<!-- custom code end-->
